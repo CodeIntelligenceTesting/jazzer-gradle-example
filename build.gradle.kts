@@ -1,6 +1,6 @@
 plugins {
     id("java")
-    id("com.code-intelligence.cifuzz") version "1.9.1"
+    id("com.code-intelligence.cifuzz") version "1.10.0"
 }
 
 group = "com.code-intelligence"
@@ -19,12 +19,6 @@ repositories {
         }
     }
     mavenCentral()
-}
-
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("com.code-intelligence:jazzer-junit:0.21.97")
 }
 
 tasks.test {

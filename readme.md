@@ -1,6 +1,6 @@
 # Jazzer Gradle Example
 
-This example uses the closed source Jazzer version 0.21.97, available from the private GitLab package repository at https://gitlab.code-intelligence.com/groups/artifacts/-/packages.
+This example uses the closed source cifuzz plugin version 1.10.0 and Jazzer version 0.23.0, available from the private GitLab package repository at https://gitlab.code-intelligence.com/groups/artifacts/-/packages.
 
 **Note**: The project can not be build without proper repository setup!
 
@@ -44,12 +44,8 @@ This example uses the closed source Jazzer version 0.21.97, available from the p
       ```
    1. Added cifuzz Gradle plugin in `build.gradle.kts`
        ```kotlin
-        id("com.code-intelligence.cifuzz") version "1.9.0"
+        id("com.code-intelligence.cifuzz") version "1.10.0"
         ```
-   1. Added Jazzer JUnit dependency in `build.gradle.kts`
-       ```kotlin
-       testImplementation("com.code-intelligence:jazzer-junit:0.21.97")
-       ```   
 1. Install `cifuzz` `2.19.0+`
 
 ## Run
