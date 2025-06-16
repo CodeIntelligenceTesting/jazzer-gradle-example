@@ -1,24 +1,18 @@
 plugins {
     id("java")
-    id("com.code-intelligence.cifuzz") version "1.10.0"
 }
 
-group = "com.code-intelligence"
+group = "org.example"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    // Add the Code Intelligence repository to resolve Jazzer dependencies
-    // Authentication is provided via gradle.properties to not include them in the build file.
-    // For more options see https://docs.gradle.org/current/samples/sample_publishing_credentials.html
-    maven {
-        name = "CodeIntelligenceRepository"
-        url = uri("https://gitlab.code-intelligence.com/api/v4/projects/89/packages/maven")
-        credentials(PasswordCredentials::class)
-        content {
-            includeGroupByRegex("com\\.code-intelligence.*")
-        }
-    }
     mavenCentral()
+}
+
+dependencies {
+    implementation("com.code-intelligence:jazzer-junit:0.24.0")
+    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
 tasks.test {
